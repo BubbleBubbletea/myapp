@@ -1,0 +1,52 @@
+[
+    {
+      "id": 1,
+      "name": "Daisy Zhang",
+      "major": "Computer Science",
+      "email": "123-456-7890",
+      "intro": "Hi, I'm Alice! I'm passionate about coding, especially in Python and JavaScript. I enjoy working on web development projects and am currently exploring AI and machine learning. Let's collaborate on some cool tech ideas!",
+      "courses" : {
+        "current" : "CS214 Stat210 DTC Psych110",
+        "finished" : "CS111 EA1 MATH228-1 ASIAN-LC240"
+      },
+      "groupId": 1
+    },
+    {
+      "id": 2,
+      "name": "David",
+      "major": "Biology",
+      "email": "987-654-3210",
+      "intro": "I love combining biology and engineering to solve healthcare challenges. In my free time, I work on 3D printing prototypes and enjoy hiking. ",
+      "courses" : {
+        "current" : "Bio214 Bio210 DTC Psych110",
+        "finished" : "CS111 EA1 MATH228-1 Sociology110"
+      },
+      "groupId": 1
+    },
+    {
+      "id": 3,
+      "name": "Charlie",
+      "major": "Philosophy",
+      "email": "456-789-0123",
+      "intro": "I’m interested in ethics and how philosophy shapes our understanding of the world. I enjoy debating big ideas and writing essays on social issues. ",
+      "courses" :{
+        "current": "Philo210 Sociology240",
+        "finished": "Philo200 Psych210"
+      },
+      "groupId": 2
+    },
+
+    {
+      "id": 4,
+      "name": "Alex",
+      "major": "Fine Arts",
+      "email": "321-654-0987",
+      "intro" : "I love exploring different mediums, from painting to digital design. My work often reflects themes of identity and nature. I’m excited to share ideas and collaborate on creative projects!",
+      "courses":{
+        "current": "Art 310",
+        "finished" : "Art 110"
+      },
+      "groupId": 3
+    }
+  ]
+  

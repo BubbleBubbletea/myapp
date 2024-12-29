@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "name": "STEM Group",
+      "description": "Group for students passionate about STEM fields.",
+      "image": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2018/10/stem-cells.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Humanities Group",
+      "description": "Group for students interested in history, literature, and philosophy.",
+      "image": "https://assets1.ignimgs.com/2019/09/24/humanity---button-01a-1569360342834.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Arts Group",
+      "description": "Group for students passionate about music, art, and design.",
+      "image": "https://www.music.northwestern.edu/sites/default/files/2017-11/Chamber_Music2.jpg"
+    }
+  ]
+  

@@ -1,0 +1,108 @@
+{
+  "groups": [
+    {
+      "id": "1",
+      "name": "STEM Group",
+      "description": "Group for students passionate about STEM fields.",
+      "image": "https://post.medicalnewstoday.com/wp-content/uploads/sites/3/2018/10/stem-cells.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Humanities Group",
+      "description": "Group for students interested in history, literature, and philosophy.",
+      "image": "https://assets1.ignimgs.com/2019/09/24/humanity---button-01a-1569360342834.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Arts Group",
+      "description": "Group for students passionate about music, art, and design.",
+      "image": "https://www.music.northwestern.edu/sites/default/files/2017-11/Chamber_Music2.jpg"
+    }
+  ],
+  "members": [
+    {
+      "id": 1,
+      "name": "Daisy Zhang",
+      "major": "Computer Science",
+      "email": "daisy@gmail.com",
+      "introduction": "Hi, I love Cooking and swimming",
+      "courses": {
+        "current": "CS214 Stat210 DTC Psych110",
+        "finished": "CS111 EA1 MATH228-1 ASIAN-LC240"
+      },
+      "groupId": 1
+    },
+    {
+      "id": 2,
+      "name": "Lucy Zhao",
+      "major": "Philosophy",
+      "email": "lucy@gmail.com",
+      "introduction": "I love skiing ",
+      "courses": {
+        "current": "Gender210",
+        "finished": "Philo200 Psych213"
+      },
+      "groupId": 2
+    },
+    {
+      "id": 3,
+      "name": "Alice",
+      "major": "Burden",
+      "email": "alice@gmail.com",
+      "introduction": "I love playing volleyball.",
+      "courses": {
+        "current": "Bio211 Math228-1 ",
+        "finished": "CS111 EA1 MATH228-1 ASIAN-LC240"
+      },
+      "groupId": 1
+    },
+    {
+      "id": 4,
+      "name": "Lucia",
+      "major": "Johnson",
+      "email": "lucia@gmail.com",
+      "introduction": "I love playing piano and painting",
+      "courses": {
+        "current": "JOUR 201",
+        "finished": "Art 110"
+      },
+      "groupId": 3
+    },
+    {
+      "id": 5,
+      "name": "Michael",
+      "major": "Econnomic",
+      "email": "michael@gmail.com",
+      "introduction": "Making money ",
+      "courses": {
+        "current": "Econ301 Econ302",
+        "finished": "Econ101 Econ 101"
+      },
+      "groupId": 2
+    },
+    {
+      "id": 6,
+      "name": "Renny",
+      "major": "business",
+      "email": "renny@gmail.com",
+      "introduction": "sdd",
+      "courses": {
+        "current": "Econ301 Econ302",
+        "finished": "Econ101 Econ 101"
+      },
+      "groupId": 2
+    },
+    {
+      "id": 7,
+      "name": "aaa",
+      "major": "aaa",
+      "email": "aaa",
+      "introduction": "aaa",
+      "courses": {
+        "current": "aaa",
+        "finished": "aaa"
+      },
+      "groupId": 2
+    }
+  ]
+}
