@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 const MemberForm = ({ member = {}, onSubmit, onCancel }) => {
     const [formState, setFormState] = useState({
-      id: member.id || "", // Include id for editing
+      id: member.id || "", 
       name: member.name || "",
       major: member.major || "",
       email: member.email || "",
@@ -11,6 +11,22 @@ const MemberForm = ({ member = {}, onSubmit, onCancel }) => {
         finished: member.courses?.finished || "",
       },
     });
+
+    useEffect(() => {
+      if (member.id) {
+        setFormState({
+          id: member.id,
+          name: member.name || "",
+          major: member.major || "",
+          email: member.email || "",
+          introduction: member.introduction || "",
+          courses: {
+            current: member.courses?.current || "",
+            finished: member.courses?.finished || "",
+          },
+        });
+      }
+    }, [member]);
   
     const handleChange = (e) => {
       const { name, value } = e.target;

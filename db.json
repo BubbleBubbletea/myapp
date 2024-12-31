@@ -21,7 +21,7 @@
   ],
   "members": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Daisy Zhang",
       "major": "Computer Science",
       "email": "daisy@gmail.com",
@@ -33,8 +33,8 @@
       "groupId": 1
     },
     {
-      "id": 2,
-      "name": "Lucy Zhao",
+      "id": "2",
+      "name": "Lucy Blake",
       "major": "Philosophy",
       "email": "lucy@gmail.com",
       "introduction": "I love skiing ",
@@ -45,7 +45,7 @@
       "groupId": 2
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Alice",
       "major": "Burden",
       "email": "alice@gmail.com",
@@ -57,8 +57,8 @@
       "groupId": 1
     },
     {
-      "id": 4,
-      "name": "Lucia",
+      "id": "4",
+      "name": "Lucian",
       "major": "Johnson",
       "email": "lucia@gmail.com",
       "introduction": "I love playing piano and painting",
@@ -69,7 +69,7 @@
       "groupId": 3
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Michael",
       "major": "Econnomic",
       "email": "michael@gmail.com",
@@ -81,7 +81,7 @@
       "groupId": 2
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Renny",
       "major": "business",
       "email": "renny@gmail.com",
@@ -93,7 +93,7 @@
       "groupId": 2
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "aaa",
       "major": "aaa",
       "email": "aaa",

@@ -9,7 +9,7 @@ const GroupListings = () => {
   useEffect(() => {
     const fetchGroups = async () => {
         try {
-            const res = await fetch('http://localhost:6699/groups');
+            const res = await fetch('http://localhost:6688/groups');
             const data = await res.json();
             setGroups(data);
           } catch (error) {
