@@ -1,8 +1,15 @@
-# React + Vite
+# NUFindGroup
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NUFindGroup is a social networking platform designed for Northwestern University students. It enables students to connect with like-minded peers. The platform provides features such as group management, member interactions, and secure user authentication. please visit the website via you laptop. 
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **Features**
+
+- **User Authentication**: Secure signup and login functionality using Supabase.
+- **Group Listings**: Explore and interact with groups categorized into STEM, Humanities, and Arts.
+- **Member Management**: Add, edit, and delete group members, with changes reflected across the database.
+- **Backend API**: RESTful API deployed on Vercel to handle user and member data.
+- **Responsive Frontend**: A React-based interface deployed on Vercel, ensuring smooth user interactions.
+
+
