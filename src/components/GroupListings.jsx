@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import GroupListing from './GroupListing';
 import groupsData from '../groups.json'; 
+import { API_URL } from '../config';
+import { supabase } from '../supabaseClient';
 
 const GroupListings = () => {
   const [groups, setGroups] = useState([]);
@@ -9,7 +11,12 @@ const GroupListings = () => {
   useEffect(() => {
     const fetchGroups = async () => {
         try {
-            const res = await fetch('http://localhost:6688/groups');
+            const token = (await supabase.auth.getSession()).data.session?.access_token;
+            const res = await fetch(`${API_URL}/groups`, {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            });
             const data = await res.json();
             setGroups(data);
           } catch (error) {

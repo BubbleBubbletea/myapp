@@ -1,4 +1,6 @@
 import { useCallback, useState } from 'react';
+import { API_URL } from '../config';
+import { supabase } from '../supabaseClient';
 
 export const useMemberOperations = (groupId) => {
     const [members, setMembers] = useState([]);
@@ -6,7 +8,12 @@ export const useMemberOperations = (groupId) => {
 
     const fetchMembers = useCallback(async () => {
         try {
-            const response = await fetch(`http://localhost:6688/members?groupId=${groupId}`);
+            const token = (await supabase.auth.getSession()).data.session?.access_token;
+            const response = await fetch(`${API_URL}/members?groupId=${groupId}`, {
+                headers: {
+                  Authorization: `Bearer ${token}`,
+                },
+              });
             if (response.ok) {
                 const data = await response.json();
                 setMembers(data);
@@ -19,8 +26,12 @@ export const useMemberOperations = (groupId) => {
     const handleDelete = useCallback(async (memberId) => {
         if (window.confirm("Are you sure you want to delete this member?")) {
             try {
-                const response = await fetch(`http://localhost:6688/members/${memberId}`, {
+                const token = (await supabase.auth.getSession()).data.session?.access_token; 
+                const response = await fetch(`${API_URL}/members/${memberId}`, {
                     method: 'DELETE',
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                    },
                 });
 
                 if (response.ok) {
@@ -43,10 +54,13 @@ export const useMemberOperations = (groupId) => {
                 id: newId,
                 groupId: Number(groupId)
             };
+            const token = (await supabase.auth.getSession()).data.session?.access_token; 
 
-            const res = await fetch(`http://localhost:6688/members`, {
+            const res = await fetch(`${API_URL}/members`, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json' , 
+                    Authorization: `Bearer ${token}`,
+                },
                 body: JSON.stringify(memberWithId),
             });
 
@@ -75,10 +89,13 @@ export const useMemberOperations = (groupId) => {
             };
 
             console.log('Updating member:', updatedMemberWithGroupId);
+            const token = (await supabase.auth.getSession()).data.session?.access_token;
 
-            const res = await fetch(`http://localhost:6688/members/${updatedMember.id}`, {
+            const res = await fetch(`${API_URL}/members/${updatedMember.id}`, {
                 method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json',
+                    Authorization: `Bearer ${token}`,
+                 },
                 body: JSON.stringify(updatedMemberWithGroupId),
             });
 

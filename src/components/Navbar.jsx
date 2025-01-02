@@ -44,6 +44,18 @@ const Navbar = () => {
             </NavLink>
           </li>
         </ul>
+
+          {/* Authentication Links */}
+          <div className="flex space-x-6">
+          <NavLink to="/login" className={linkClass}>
+            Login
+          </NavLink>
+          <NavLink to="/signup" className={linkClass}>
+            Signup
+          </NavLink>
+        </div>
+
+
       </div>
     </nav>
   );

@@ -4,7 +4,8 @@ import MemberCard from "../components/MemberCard";
 import { useParams, Link } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
 import { useMemberOperations } from '../hooks/useMemberOperations';
-
+import { API_URL } from '../config';
+import { supabase } from '../supabaseClient';
 const GroupPage = () => {
   const { id } = useParams();
   const [group, setGroup] = useState(null);
@@ -22,22 +23,41 @@ const GroupPage = () => {
   } = useMemberOperations(id);
 
   useEffect(() => {
-    const fetchGroupData = async () => {
+    const checkAuthAndFetchData = async () => {
       try {
-        const groupId = parseInt(id);
-        const groupRes = await fetch(`http://localhost:6688/groups/${groupId}`);
-        if (groupRes.ok) {
-          const groupData = await groupRes.json();
-          setGroup(groupData);
+        const { data: { session } } = await supabase.auth.getSession();
+        if (!session) {
+          // Redirect to login with return URL
+          const currentUrl = window.location.pathname; // Capture the current URL
+          window.location.href = `/login?returnUrl=${encodeURIComponent(currentUrl)}`;
+          return;
         }
+  
+        const token = session.access_token;
+        const groupRes = await fetch(`${API_URL}/groups/${id}`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+  
+        if (!groupRes.ok) {
+          throw new Error('Failed to fetch group data');
+        }
+  
+        const groupData = await groupRes.json();
+        setGroup(groupData);
+  
+        // Fetch members only after authentication check
+        fetchMembers();
       } catch (error) {
         console.error("Error fetching group:", error);
       }
     };
-
-    fetchGroupData();
-    fetchMembers();
+  
+    checkAuthAndFetchData();
   }, [id, fetchMembers]);
+  
+  
 
   const toggleExpand = useCallback((memberId) => {
     setExpandedMemberId(prev => prev === memberId ? null : memberId);
