@@ -1,1 +1,1 @@
-export const API_URL = "http://localhost:3009";
+export const API_URL = import.meta.env.VITE_BASE_URL;
